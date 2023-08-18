@@ -6,6 +6,5 @@ export async function GET(){
     method: 'GET'
   })
   const data = await res.json()
-  console.log(data)
-  return NextResponse.json({ data })
+  return new Response(JSON.stringify(data))
 }

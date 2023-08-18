@@ -1,20 +1,8 @@
-'use client'
-import { useEffect, useState } from "react"
+import Grupos from "@/components/Grupos"
 export default function Home() {
-  const [grupos,setGrupos] = useState(null)
-  useEffect(()=>{
-    fetch('/api/grupos',{
-      method:'GET',
-      headers:{
-        'Content-Type':'application/json'
-      }
-    })
-    .then((res)=>res.json())
-    .then((data)=>setGrupos(data))
-  },[])
   return (
     <main className="">
-
+      <Grupos></Grupos>
     </main>
 
   )
